@@ -1,0 +1,46 @@
+.nf404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .nf-title {
+        color: #FF6060;
+        font-size: 288px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .nf-txt{
+        font-weight: 500;
+        font-size: 36px;
+        color: #FF6060;
+        text-align: center;
+    }
+
+    .nf-a{
+        font-style: 18px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        text-align: center;
+    }
+}
+
+@media (max-width : 665px) {
+    .nf404 {
+    .nf-title {
+        font-size: 96px;
+    }
+
+    .nf-txt{
+        padding-top: 100px;
+        font-size: 18px;
+
+    }
+
+    .nf-a{
+        font-size: 14px;
+
+    }
+}
+}

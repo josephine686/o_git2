@@ -1,0 +1,95 @@
+.apropos-banner {
+    width: 100%;
+    max-width: 1240px;
+    min-width: 305px;
+    height: 223px;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .img-banner-top {
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(0.6);
+        border-radius: 25px;
+    }
+}
+
+.menu {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .cardMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+        position: absolute;
+    }
+
+    label {
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        background-color: #FF6060;
+        border-radius: 5px;
+        width: 70%;
+        max-width: 983px;
+        min-width: 295px;
+        height: 54px;
+        font-weight: 700;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    input[type="checkbox"]+label::after {
+        content: "";
+        display: block;
+        background-image: url("../assets/arrowUP.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    }
+
+    input[type="checkbox"]:checked+label::after {
+        transform: rotate(-180deg);
+        transition: transform 0.3s ease;
+    }
+
+    input[type="checkbox"]~p {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-62px);
+        transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    input[type="checkbox"]:checked~p {
+        opacity: 1;
+        max-height: 1000px;
+        transform: translateY(0);
+        transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .p-label {
+        width: 74%;
+        max-width: 1023px;
+        min-width: 335px;
+        background-color: #F6F6F6;
+        margin-top: 0;
+        border-radius: 5px;
+    }
+}

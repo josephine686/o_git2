@@ -1,0 +1,26 @@
+.indexFooter{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img{
+        margin-top: 60px;
+    }
+
+    .txtFooter{
+        color: white;
+        margin-top: 26px;
+        margin-bottom: 26px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width : 520px) {
+    .txtFooter{
+        margin-right: 20%;
+        margin-left: 20%;
+        font-size: 12px;
+    }
+}
