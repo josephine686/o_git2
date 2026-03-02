@@ -5,6 +5,8 @@
     min-width: 335px;
     height: 223px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 20px;
@@ -21,11 +23,12 @@
         object-fit: cover;
         filter: brightness(0.6);
         border-radius: 25px;
+        display: flex;
     }
 
     h1 {
         display: flex;
-        justify-content: center;
+        text-align: center;
         align-items: center;
         color: white;
     }
@@ -104,17 +107,22 @@
 }
 
 @media (max-width : 520px) {
-    .topBody {
+    .top-body-index {
         height: 111px;
+        justify-content: flex-start;
+        
+        .img-index-top{
+            height: 111px;
+        }
 
         h1 {
             font-size: 24px;
             margin-right: 90px;
             margin-left: 20px;
+            text-align:left;
+            margin-right: 50px;
         }
 
-        img {
-            height: 111px;
-        }
+
     }
 }

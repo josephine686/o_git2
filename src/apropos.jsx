@@ -49,7 +49,7 @@ function Apropos() {
 
 
 
-        {/*         <div className="cardMenu">
+        {/*<div className="cardMenu">
           <input type="checkbox" name="fiabilite" id="fiabilite" />
           <label htmlFor="fiabilite">Fiabilité</label>
           <p className='p-label'></p>
