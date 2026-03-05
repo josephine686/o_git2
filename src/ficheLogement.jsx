@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import IndexHeader from './components/indexHeader.jsx'
 import IndexFooter from './components/indexFooter.jsx'
 import './styles/ficheLogement.scss'
-import datas from './datas/datas.jsx'
+import datas from './datas/datas.json'
 import Carousel from "./components/carousel.jsx"
 import Notes from './components/notes.jsx'
 import { useEffect } from "react"
@@ -115,30 +115,6 @@ function FicheLogement() {
                         </div>
                     }
                 />
-
-
-
- {/*                <div className="desc">
-                    <input type="checkbox" name="desc" id="desc" />
-                    <label htmlFor="desc">Description</label>
-                    <p className='p-description'>
-
-                        {affichageLogement.description}
-
-                    </p>
-                </div>
-
-                <div className="presta">
-                    <input type="checkbox" name="presta" id="presta" />
-                    <label htmlFor="presta">Équipements</label>
-
-                    <div className="p-equipement">
-
-                        {equipementLogement()}
-
-                    </div>
-                </div> */}
-
 
             </div>
 

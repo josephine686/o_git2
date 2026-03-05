@@ -7,7 +7,7 @@ import starV from "../assets/starVide.svg"
 function Notes() {
     const param = useParams()
     const dataR = datas.find(data => data.id == param.id)
-    let fullRating = 5;
+    let fullRating = 5
     let ratingValue = 0
     let starPush =[]
 

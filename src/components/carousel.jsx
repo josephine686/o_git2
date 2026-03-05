@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom"
-import datas from '../datas/datas.jsx'
+import datas from '../datas/datas.json'
 import { useState } from "react"
 import flecheDroite from "../assets/CarouDroite.png"
 import flecheGauche from "../assets/CarouGauche.png"
+
 
 function Carousel() {
     const param = useParams()
@@ -20,7 +21,7 @@ function Carousel() {
             setIndex(0)
         }
     }
-    
+
 
     function carouIndexRemove() {
         if (index <= 0) {
@@ -30,18 +31,27 @@ function Carousel() {
         }
     }
 
+    if (imgCarou.length == 1) {
+        return <>
+            <img className="img-carous" src={imgCarou[0]} alt={"images logements carousel"} key={imgCarou[0]} />
+        </>
+    } else {
 
-    return <>
 
-        <img onClick={carouIndexAdd} className="flecheCarouDroite" src={flecheDroite} alt="" />
+        return <>
 
-        <img className="img-carous" src={imgCarou[index]} alt={"images logements carousel"} key={imgCarou[index]} />
+            <img onClick={carouIndexAdd} className="flecheCarouDroite" src={flecheDroite} alt="" />
 
-        <img onClick={carouIndexRemove} className="flecheCarouGauche" src={flecheGauche} alt="" />
+            <img className="img-carous" src={imgCarou[index]} alt={"images logements carousel"} key={imgCarou[index]} />
 
-        <p className="counterCarou">{index +1} / {imgCarou.length}</p>
+            <img onClick={carouIndexRemove} className="flecheCarouGauche" src={flecheGauche} alt="" />
 
-    </>
+            <p className="counterCarou">{index + 1} / {imgCarou.length}</p>
+
+        </>
+
+    }
+
 }
 
 export default Carousel

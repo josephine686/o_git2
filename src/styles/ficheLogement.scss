@@ -42,7 +42,7 @@
             left: 50%;
             transform: translateX(-50%);
             font-weight: 500;
-            font-style: 18px;
+            font-size: 18px;
         }
     }
 }
@@ -223,7 +223,6 @@
 
 
 
-
 }
 
 
@@ -313,6 +312,11 @@
 }
 
 @media (max-width: 601px) {
+
+    .counterCarou{
+        visibility: hidden;
+    }
+
     .logement-content {
         margin-right: 20px;
         margin-left: 20px;
